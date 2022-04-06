@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Tailwind CSS shopping cart list with coupon, order summary using heroicons
+    </title>
+    <link rel="stylesheet" href="./app.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+
+    <script src="./alpinejs.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  </head>
+	<body class="antialiased font-sans">
+		<div class="max-w-4xl p-4 bg-gray-50 mx-auto">
+			<div>
+				<div class="flex items-center justify-between">
+					<h3>Invoice</h3>
+					<button>Print</button>
+				</div>
+				<div>
+					<form>	
+						<div class="flex flex-col">
+							<div class="flex items-center">
+								<label for="invoice_no">Invoice No:</label>
+								<input type="text" class="ml-2 py-1 rounded" name="invoice_no" id="invoice_no" value="INV3421" readonly>
+							</div>
+							<div class="mt-4 flex items-center">
+								<label for="invoice_date">Invoice date:</label>
+								<input type="text" class="ml-2 py-1 rounded" name="invoice_date" id="invoice_date">
+							</div>
+							<div class="mt-4 flex items-center">
+								<label for="invoice_due_date">Invoice due date:</label>
+								<input type="text" class="ml-2 py-1 rounded" name="invoice_due_date" id="invoice_due_date">
+							</div>
+						</div>
+					</form>	
+				</div>	
+			</div>					
+		</div>
+		<div><button class="font-awesome" aria-label="Font Awesome: &#xf030; &#xf133; &#xf1fc; &#xf03e; &#xf1f8;" data-balloon-pos="up">Hover me!</button></div>
+		<script>
+			new Pikaday({ field: document.getElementById('invoice_date') })
+			new Pikaday({ field: document.getElementById('invoice_due_date') })
+			
+		</script>
+	</body>
+</html>

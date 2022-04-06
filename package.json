@@ -1,0 +1,12 @@
+{
+  "name": "alpinejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "alpinejs.min.js",
+  "scripts": {
+    "dev": "tailwind -i ./src/app.css -o ./app.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
